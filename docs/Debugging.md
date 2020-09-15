@@ -22,14 +22,4 @@ A reading list for things related to PowerShell debugging:
 - The PowerShell help for [about_Debugger](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_debugger) (also available in your PowerShell sessions via `Get-Help about_Debuggers`, of course). This covers all the things debugger, covering topics like breakpoints,
 
 ### Examples
-Some examples of various debugging scenarios
-
-#### Using PowerShell Debugger
-Examples:
-- [Unexpected Logic Result](#unexpected-logic-result)
-
-##### Unexpected Logic Result
-In this example, there is the need to determine why some logic set is returning `$false` instead of the expected `$true`
-```PowerShell
-## to be written, still
-```
+See the [Debugging Examples Jupyter Lab notebook](DebuggingExamples.ipynb) for some examples of various debugging scenarios

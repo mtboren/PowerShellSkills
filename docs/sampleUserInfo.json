@@ -1,0 +1,17 @@
+[
+    {
+    "DisplayName": "Billy Boy",
+    "SamAccountName": "bboy0001",
+    "PhoneNbr": "800-123-4567"
+    },
+    {
+    "DisplayName": "Suzy Queue",
+    "SamAccountName": "squeue0009",
+    "PhoneNbr": "800-234-5678"
+    },
+    {
+    "DisplayName": "Ricky Rocky",
+    "SamAccountName": "rrocky0045",
+    "PhoneNbr": ""
+    }
+]
