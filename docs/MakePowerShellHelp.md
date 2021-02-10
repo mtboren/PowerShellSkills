@@ -27,76 +27,32 @@ Consider this function definition for `Get-Nugglet` that includes the help for t
     .Example
     Get-Nugglet
     Get all the nugglets from the connected server
-
-    .Example
-    Get-Nugglet -Name myImportantNugg0, otherNugg*
-    Get the nugglets of the given names
 #>
 param(
     ## Name(s) of the nugglet(s) to get. Accepts wildcards
     [String[]]$Name
 )
-
-process {
-    <# do hot stuff here #>
-}
+...
 ```
-By placing the prescribed keywords in a block comment (get it, comment-based help?), we have now created help for the function. When someone then wonders how in the world to use this slick function, they do what they would always do:  `Get-Help`.  The help defined with the function above would give us the PowerShell help that we know and love:
-```PowerShell
-PS C:\> Get-Help -Full Get-Nugglet
+By placing the prescribed keywords in a block comment (get it, comment-based help?), we have now created help for the function. When someone then wonders how in the world to use this slick function, they do what they would always do:  `Get-Help`.  The help defined with the function above would give us the PowerShell help that we know and love. See [Examples](#Examples) below.
 
-NAME
-    Get-Nugglet
-
-
-SYNTAX
-    Get-Nugglet [[-Name] <String[]>] [<CommonParameters>]
-
-
-DESCRIPTION
-    Get the important nugglets from the server based on the identity provided (nugglet name, or all)
-
-
-PARAMETERS
-    -Name <String[]>
-        Name(s) of the nugglet(s) to get. Accepts wildcards
-
-        Required?                    false
-        Position?                    1
-        Default value
-        Accept pipeline input?       false
-        Accept wildcard characters?  false
-
-    <CommonParameters>
-        This cmdlet supports the common parameters: Verbose, Debug,
-        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-        OutBuffer, PipelineVariable, and OutVariable. For more information, see
-        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
-
-INPUTS
-
-OUTPUTS
-
-    -------------------------- EXAMPLE 1 --------------------------
-
-    PS C:\>Get-Nugglet
-
-    Get all the nugglets from the connected server
-
-    -------------------------- EXAMPLE 2 --------------------------
-
-    PS C:\>Get-Nugglet -Name myImportantNugg0, otherNugg*
-
-    Get the nugglets of the given names
-
-
-RELATED LINKS
-```
-<<work in progress -- resume here>>
 ## Examples
-- in ipynb of various versions of .ps1 (no help, minor help with just .Description and Param comments, full on with Examples / output type / related links / etc )
+- See [MakePowerShellHelp_Examples.ipynb](./MakePowerShellHelp_Examples.ipynb) for versions of the same script that vary in their comment-based help -- excitement!
 
 ## Reading list and documentation
-- get-help get-help
-- get-help about_comment_based_help
-- writing cmdlet help
+- The PowerShell help for creating help in your own functions/modules:
+    ```PowerShell
+    Get-Help about_Comment_Based_Help
+    ```
+    And, the [online version](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comment_based_help)
+- Microsoft's [Writing Comment-Based Help Topic](https://docs.microsoft.com/en-us/powershell/scripting/developer/help/writing-comment-based-help-topics): Comment-based help syntax, placement, etc
+- Microsoft's  [Writing Help for PowerShell Modules](https://docs.microsoft.com/en-us/powershell/scripting/developer/help/writing-help-for-windows-powershell-modules): Writing help topics for your whole module
+- PowerShell Help output conventions, great for, "what do those square brackets mean in the help?":
+    ```PowerShell
+    Get-Help about_Command_Syntax
+    ```
+    And, the [online version](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_command_syntax)
+- And, there is all kinds of interesting help to get on, well, `Get-Help`! Like, help topics/categories, displaying the help online, etc.
+    ```PowerShell
+    Get-Help -Full -Name Get-Help
+    ```
