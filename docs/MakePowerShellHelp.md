@@ -1,7 +1,7 @@
 # Make PowerShell Help for Functions/Cmdlets
 Contents:
 - [Intro](#Introduction):  **What**: Help! Make it available for your functions/cmdlets/modules, just like it is available for everything else in PowerShell
-- [Quick details on help's guts](#Quick-details:-what-makes-help-and-how-to-add-it): **How** to create help with a few comments
+- [Quick details on help's guts](#quick-details-what-makes-help-and-how-to-add-it): **How** to create help with a few comments
 - [Examples](#Examples)
 - [Reading list, documentation](#Reading-list-and-documentation) The docs on how to get help, make help, have style
 
