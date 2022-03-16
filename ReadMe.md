@@ -5,6 +5,7 @@ For starters, some general exploration, and some PowerShell debugging.
 
 Topics:
 - [General Exploration](docs/GeneralExploration.ipynb): General things about PowerShell
+- [Modules in PowerShell](docs/PowerShellModules.md): Where we get commands (and lots else) in PowerShell
 - [Make Help for your functions/cmdlets/modules](docs/MakePowerShellHelp.md): Make help for the world!
 - [Debugging](docs/Debugging.md): Getting going with debugging in PowerShell
 - [Getting going with JupyterLab and notebooks](docs/JupyterLabAndNotebooks-GettingStarted.ipynb):  For when you want to make notebooks with interactive code cells along with your Markdown, go-o-o-o, Jupyter! Applies to PowerShell and \<lotsa other supported languages>
