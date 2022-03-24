@@ -14,6 +14,7 @@ Some information about a subset of the files used in PowerShell (particulary, us
 
 ## More info
 There are tidbits sprinkled about the official Microsoft documentation for these file types.  See the links here:
+- Lots of goodness about components of module manifest `.psd1` files in [How to write a PowerShell module manifest](https://docs.microsoft.com/en-us/powershell/scripting/developer/module/how-to-write-a-powershell-module-manifest)
 - Light info in [Module Manifests](https://docs.microsoft.com/en-us/powershell/scripting/developer/module/understanding-a-windows-powershell-module#module-manifests) section at Microsoft Docs
 - Minor info about `.psd1` files in the [Import-PowerShellDataFile](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/import-powershelldatafile) help
 - Full info on `.ps1xml` formatting files in the [about_Format.ps1xml](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_format.ps1xml) help topic
