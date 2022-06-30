@@ -23,6 +23,10 @@ begin {
         process {
             & $PSScriptRoot\Write-VerboseEnhanced.ps1 -Message "$strInfoToPrefix Removing cool thing '$CoolThing'"
             Start-Sleep -Seconds 0.25
+            ## for simulation purposes:  did this "removal" succeed?
+            $bRemovalSucceeded = (@($true) * 4), $false | Get-Random
+            if (-not $bRemovalSucceeded) {Write-Warning "$strInfoToPrefix D'oh! Failed to remove cool thing '$CoolThing'"}
+            $bRemovalSucceeded
         }
 
     }
@@ -34,13 +38,13 @@ process {
         & $PSScriptRoot\Write-VerboseEnhanced.ps1 -Message "$strInfoToPrefix Working on item '$strThisUserName'"
         & $PSScriptRoot\Write-VerboseEnhanced.ps1 -Message "$strInfoToPrefix Deleting user '$strThisUserName' from some system"
         ## just for demo purpose, to emulate actual "doing something" kind of timing/duration
-        Remove-SomeCoolThing -CoolThing $strThisUserName
+        $bRemovedUser = Remove-SomeCoolThing -CoolThing $strThisUserName
         ## return an object with properties that show the user, its GUID, the success/failure of removal, and when removed
         #    for "real" implementation, this would have dynamic value for RemovedSuccessfully property based upon actual success
         [pscustomobject][ordered]@{
             User = "$strThisUserName"
             Guid = (New-Guid).Guid
-            RemovedSuccessfully = $true
+            RemovedSuccessfully = $bRemovedUser
             RemovalDatetime = Get-Date
         }
     }
