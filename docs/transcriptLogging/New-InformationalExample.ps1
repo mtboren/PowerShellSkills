@@ -2,10 +2,13 @@
     Give some examples of informational output using a "helper" function for uniform verbose messages, and emitting reusable objects for subsequent reporting / action
 
     .Example
-    New-InformationalExample.ps1
+    Write-Output user0 otherUser3 | New-InformationalExample.ps1
 
 #>
-[CmdletBinding()]param()
+[CmdletBinding()]param(
+    ## Some object upon which to act; a "user" name for this example, just for illustration
+    [parameter(ValueFromPipeline=$true, Mandatory=$true)][String[]]$UserName
+)
 
 begin {
     $strInfoToPrefix = "[$($MyInvocation.MyCommand.Name)]"
@@ -26,9 +29,9 @@ begin {
 }
 
 process {
-    1..5 | ForEach-Object {
-        $strThisUserName = "user$_"
-        & $PSScriptRoot\Write-VerboseEnhanced.ps1 -Message "$strInfoToPrefix Working on item '$_'"
+    $UserName | ForEach-Object {
+        $strThisUserName = $_
+        & $PSScriptRoot\Write-VerboseEnhanced.ps1 -Message "$strInfoToPrefix Working on item '$strThisUserName'"
         & $PSScriptRoot\Write-VerboseEnhanced.ps1 -Message "$strInfoToPrefix Deleting user '$strThisUserName' from some system"
         ## just for demo purpose, to emulate actual "doing something" kind of timing/duration
         Remove-SomeCoolThing -CoolThing $strThisUserName

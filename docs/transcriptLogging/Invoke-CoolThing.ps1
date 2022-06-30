@@ -13,7 +13,7 @@ begin {
 }
 
 process {
-    & $PSScriptRoot\New-InformationalExample.ps1 | ConvertTo-Json | Out-File -FilePath ($strOutFilespec = "$env:temp\deletedUsers-$(Get-Date -Format FileDateTime).json")
+    1kb..2kb | Get-Random -Count 10 | Foreach-Object {"user$_"} | & $PSScriptRoot\New-InformationalExample.ps1 | ConvertTo-Json | Out-File -FilePath ($strOutFilespec = "$env:temp\deletedUsers-$(Get-Date -Format FileDateTime).json")
     Write-Verbose "Finished doing the things. Serialized objects written to '$strOutFilespec'"
     ## return the fileinfo object for the emitted, serialized objects
     Get-Item $strOutFilespec
