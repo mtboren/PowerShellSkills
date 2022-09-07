@@ -5,6 +5,7 @@ For starters, some general exploration, and some PowerShell debugging.
 
 Topics:
 - [General Exploration](docs/GeneralExploration.ipynb): General things about PowerShell
+- [Supporting Confirmation](docs/SupportingShouldProcess.ipynb): Supporting `-Confirm` / requesting confirmation the PowerShell way (via `SupportsShouldProcess` in [`CmdletBinding`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_cmdletbindingattribute) attribute); also, support `-WhatIf` in the same way
 - [Modules in PowerShell](docs/PowerShellModules.md): Where we get commands (and lots else) in PowerShell
 - [PowerShell File Types](docs/PowerShellFileTypes.md): Info about types of files used in PowerShell
 - [Make Help for your functions/cmdlets/modules](docs/MakePowerShellHelp.md): Make help for the world!
