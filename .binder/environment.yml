@@ -1,7 +1,8 @@
-name: dotnet5.0
+name: latest_dotnet
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - dotnet=5.0
-  
+  # - dotnet=5.0
+  ## use latest
+  - dotnet
