@@ -11,7 +11,8 @@
     - HTML output template
 - have seen in some inception coding / meta-programming (if ever doing so; good for haX0rs)
     - SSL Config .ini file for generating new CSR
+    - for creating "input" files used by other binaries like nslookup.exe (for use cases that cmdlets do not yet cover)
 
 ## When Not To Use
 - mostly, just "use sparingly"; you may have made it this far without them
-- bigger or structured data, just use native file format (JSON, YAML, PSD1, XML, HTML, CSV, whatever)
+- for bigger or structured data, just use native file format (JSON, YAML, PSD1, XML, HTML, CSV, whatever)
