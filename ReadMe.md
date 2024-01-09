@@ -8,7 +8,8 @@ Topics:
 - [🌳Abstract Syntax Tree](docs/AbstractSyntaxTrees.md): A bit on data structures used to represent the structure / elements of the code
 - [🐛Debugging](docs/Debugging.md): Getting going with debugging in PowerShell
 - [Getting going with JupyterLab and notebooks](docs/JupyterLabAndNotebooks-GettingStarted.ipynb):  For when you want to make notebooks with interactive code cells along with your Markdown, go-o-o-o, Jupyter! Applies to PowerShell and \<lotsa other supported languages>
-- [Make Help for your functions/cmdlets/modules](docs/MakePowerShellHelp.md): Make help for the world!
+- [📊Graphing and Plotting, Jupyter and ScottPlot](docs/PlottingWithScottPlot.ipynb): Using a plotting package with PowerShell and Jupyter in VSCode Polyglot notebooks
+- [🙋‍♀️Make Help for your functions/cmdlets/modules](docs/MakePowerShellHelp.md): Make help for the world!
 - [Maximize Reuse](docs/MaximizeReuse.ipynb): Info about maximizing the value of artifacts we create by maximizing ease of reuse
 - [Modules in PowerShell](docs/PowerShellModules.md): Where we get commands (and lots else) in PowerShell
 - [Parameter Validation for Functions](docs/FunctionParameterInputValidation.ipynb): Set us all up for success, and most easily, by using standard parameter validation for our functions, scripts, cmdlets, etc
