@@ -1,13 +1,14 @@
-# PowerShell Skills
+# PowerShell Skills and More
 Some things related to various PowerShell skills, like debugging, module development, general PowerShell session capabilities, etc.
 
-For starters, some general exploration, and some PowerShell debugging.
+Also, various tangential topics that makes us even better.
 
 Topics:
 - [General Exploration](docs/GeneralExploration.ipynb): General things about PowerShell
 - [🌳Abstract Syntax Tree](docs/AbstractSyntaxTrees.md): A bit on data structures used to represent the structure / elements of the code
 - [🐛Debugging](docs/Debugging.md): Getting going with debugging in PowerShell
-- [Getting going with JupyterLab and notebooks](docs/JupyterLabAndNotebooks-GettingStarted.ipynb):  For when you want to make notebooks with interactive code cells along with your Markdown, go-o-o-o, Jupyter! Applies to PowerShell and \<lotsa other supported languages>
+- (_older_) [👴Getting going with JupyterLab and notebooks](docs/JupyterLabAndNotebooks-GettingStarted.ipynb):  For when you want to make notebooks with interactive code cells along with your Markdown, go-o-o-o, Jupyter! Applies to PowerShell and \<lotsa other supported languages>
+- [👩‍💻Getting going with Polyglot Jupyter Notebooks, .NET Interactive](docs/JupyterAndPolyglotNotebooks-GettingStarted.ipynb):  The modern way to make notebooks with interactive code cells, and in lots of programming languages (all at the same time, if desired!)
 - [📊Graphing and Plotting, Jupyter and ScottPlot](docs/PlottingWithScottPlot.ipynb): Using a plotting package with PowerShell and Jupyter in VSCode Polyglot notebooks
 - [🙋‍♀️Make Help for your functions/cmdlets/modules](docs/MakePowerShellHelp.md): Make help for the world!
 - [Maximize Reuse](docs/MaximizeReuse.ipynb): Info about maximizing the value of artifacts we create by maximizing ease of reuse
