@@ -21,8 +21,20 @@ Callstack | the stack of functions / cmdlets that have been called to get to the
 ### In an Integrated Development Environment ("IDE") -- Visual Studio Code
 With some PowerShell in an opened file, set a breakpoint, then `Run -> Start Debugging` (or `F5`) the script/function/code.
 
+Some examples, setting breakpoints to:
+1. 🔢 Pause at a line number: click in the "gutter" next to the line on which to add breakpoint
+1. 🦆 Pause at line when a variable is equal to a specific value: right-click to add breakpoint, select `Add Conditional Breakpoint...`, and enter a suitable expression/condition
+
 ### In a PowerShell session
 `Set-Breakpoint` for some script / line / function / cmdlet / condition, then run the command/script/function. Once the execution hits a given breakpoint, it enters the debugger. Use the debugger commands to inspect, step, continue, quit, etc. See the `about_debuggers` help topic for more information (also linked below).
+
+Some examples of setting a PS breakpoint in a PowerShell session from within the session:
+1. 📖 Pause when a the code reads a specific variable: `Set-PSBreakpoint -Variable myVar -Mode Read`
+1. 📞 Pause when a cmdlet is invoked: `Set-PSBreakpoint -Command Write-Verbose`
+    - different approach for precision, vs. having to know line number, or for when it's _not_ a script we're debugging
+1. 👨‍🔬Pause at specific count of "hitting" a breakpoint: `Set-PSBreakpoint -Script Get-MyStuff.ps1 -Line 22 -Action {if ($_.HitCount -eq 74) {break}}`
+    - `Action` parameter is clearly a `ScriptBlock`, so we can write any super specific condition check logic we want to suit our varying needs
+    - ℹ️ Note: `HitCount` itself is a global property of the breakpoint object -- increments during life of breakpoint (does not reset to `0` at each command invocation in PowerShell)
 
 ## How is logging still important?
 A quick note about logging (and how it is different from debugging): we still want (need) to provide information about the behavior of our code. This is "logging", for peoples' future reference. Debugging is for the given developer to understand the behavior of the code in the moment.
