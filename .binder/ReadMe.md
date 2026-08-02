@@ -1,4 +1,9 @@
 # Binder config items
+
+> [!WARNING]
+> Microsoft has discontinued .NET Interactive (Apr 2026), along with related VSCode extensions. See the announcement in the now-archived GitHub repo at https://github.com/dotnet/interactive/issues/4163
+> So, the things in this Binder project are now obsolete. Leaving this item here, though, for historical reference
+
 Some configuration items for running things in this repo in Binder Project site at https://mybinder.org/
 
 The configuration gets the Binder environment set with the .NET Interactive Jupyter kernel
